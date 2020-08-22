@@ -36,5 +36,34 @@
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
+        <!--Selected Location View Controller-->
+        <scene sceneID="uS6-8w-1Xw">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBK-db-t1a" customClass="SelectedLocationViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSY-ep-NXY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ken-CX-dU5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ILw-ra-tnC" firstAttribute="trailing" secondItem="Ken-CX-dU5" secondAttribute="trailing" id="32b-5Z-uGd"/>
+                            <constraint firstItem="Ken-CX-dU5" firstAttribute="leading" secondItem="ILw-ra-tnC" secondAttribute="leading" id="TTp-VD-mDT"/>
+                            <constraint firstAttribute="bottom" secondItem="Ken-CX-dU5" secondAttribute="bottom" id="lRT-hu-zvA"/>
+                            <constraint firstItem="Ken-CX-dU5" firstAttribute="top" secondItem="TSY-ep-NXY" secondAttribute="top" id="rMH-da-emw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ILw-ra-tnC"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Ken-CX-dU5" id="GrN-Y7-5Gj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOe-zD-vSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="133"/>
+        </scene>
     </scenes>
 </document>
