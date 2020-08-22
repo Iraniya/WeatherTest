@@ -13,6 +13,16 @@ class SelectedLocationViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    let weatheDetailsView: UIView = {
+        
+        let view =  UIView(frame: .zero)
+        
+        view.backgroundColor = UIColor.white
+       
+        return view
+        
+    }()
+    
     var currentLocation: CLLocation?
     
     private lazy var networkManager = NetworkManager()
@@ -36,7 +46,6 @@ class SelectedLocationViewController: UIViewController {
         let currentLocation = UserLocation(
             title: "Selected Location: \(locationName)",
             locationName: weatherString,
-            discipline: "Weather: \(32)",
             coordinate: CLLocationCoordinate2D(latitude: weatherData.latitude, longitude: weatherData.longitude))
         
         mapView.delegate = self

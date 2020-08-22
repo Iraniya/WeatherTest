@@ -15,16 +15,14 @@ class UserLocation: NSObject, MKAnnotation {
     //MARK: - Properties
     let title: String?
     let locationName: String?
-    let weatherCondition: String?
     let coordinate: CLLocationCoordinate2D
     
     
     //MARK: -
     
-    init(title: String?, locationName: String?, discipline: String?, coordinate: CLLocationCoordinate2D) {
+    init(title: String?, locationName: String?,  coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.locationName = locationName
-        self.weatherCondition = discipline
         self.coordinate = coordinate
         
         super.init()
@@ -43,7 +41,6 @@ class UserLocation: NSObject, MKAnnotation {
         
         title = properties["title"] as? String
         locationName = properties["location"] as? String
-        weatherCondition = properties["discipline"] as? String
         coordinate = point.coordinate
         super.init()
     }

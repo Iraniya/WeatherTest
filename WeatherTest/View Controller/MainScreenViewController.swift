@@ -14,9 +14,7 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     // MARK: -
-    
-    private var storeLocations: [UserLocation] = []
-    
+        
     private lazy var networkManager = NetworkManager()
     
     private lazy var locationManager: CLLocationManager = {
@@ -61,8 +59,8 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func updateCurrentLocationWeather(WithweatherData weatherData: WeatherData) {
         
-        let currenCLLtLocation = currentLocation ?? CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) //Or we can show error message saying location not found
-        mapView.centerToLocation(currenCLLtLocation)
+        let currentCLLocation = currentLocation ?? CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) //Or we can show error message saying location not found
+        mapView.centerToLocation(currentCLLocation)
         
         let locationName: String = ""
         let temperature = weatherData.temperature.toCelcius
@@ -72,7 +70,6 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
         let currentLocation = UserLocation(
             title: "Current Location: \(locationName)",
             locationName: weatherString,
-            discipline: "Weather: \(32)",
             coordinate: CLLocationCoordinate2D(latitude: weatherData.latitude, longitude: weatherData.longitude))
         
         mapView.delegate = self
@@ -128,18 +125,17 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
 
         let location = gestureRecognizer.location(in: mapView)
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
-
-//        // Add annotation:
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = coordinate
         
         let getLat: CLLocationDegrees = coordinate.latitude
         let getLon: CLLocationDegrees = coordinate.longitude
-
-        let getMovedMapCenter: CLLocation =  CLLocation(latitude: getLat, longitude: getLon)
-
+        
+        navigateToSelectedLocation(withLocation: CLLocation(latitude: getLat, longitude: getLon))
+        
+    }
+    
+    private func navigateToSelectedLocation(withLocation location: CLLocation) {
         let selectVC = (UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SelectedLocationViewController") as! SelectedLocationViewController)
-        selectVC.currentLocation = getMovedMapCenter
+        selectVC.currentLocation = location
         present(selectVC, animated: true, completion: nil)
     }
 }
@@ -156,16 +152,7 @@ private extension MKMapView {
 
 
 extension MainScreenViewController: MKMapViewDelegate {
-    func mapView( _ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let userLocation = view.annotation as? UserLocation else {
-            return
-        }
-        
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        userLocation.mapItem?.openInMaps(launchOptions: launchOptions)
-    }
-    
-    
+
     func mapView( _ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? UserLocation else { return nil }
         
