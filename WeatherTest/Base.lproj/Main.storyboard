@@ -39,7 +39,7 @@
         <!--Selected Location View Controller-->
         <scene sceneID="uS6-8w-1Xw">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBK-db-t1a" customClass="SelectedLocationViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectedLocationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBK-db-t1a" customClass="SelectedLocationViewController" customModule="WeatherTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TSY-ep-NXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
