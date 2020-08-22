@@ -64,7 +64,8 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
         let currenCLLtLocation = currentLocation ?? CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) //Or we can show error message saying location not found
         mapView.centerToLocation(currenCLLtLocation)
         
-        let weatherString = "Location: Chandkheda, Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
+        let locationName: String = ""
+        let weatherString = "Location: \(locationName), Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
         
         let currentLocation = UserLocation(
             title: "Current Location",
@@ -135,7 +136,7 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
 
         let getMovedMapCenter: CLLocation =  CLLocation(latitude: getLat, longitude: getLon)
 
-        let selectVC = (UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "InviteFriendsViewController") as! SelectedLocationViewController)
+        let selectVC = (UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SelectedLocationViewController") as! SelectedLocationViewController)
         selectVC.currentLocation = getMovedMapCenter
         present(selectVC, animated: true, completion: nil)
     }
@@ -171,6 +172,8 @@ extension MainScreenViewController: MKMapViewDelegate {
         
         if let dequeuedView = mapView.dequeueReusableAnnotationView( withIdentifier: identifier) as? MKMarkerAnnotationView { dequeuedView.annotation = annotation
             view = dequeuedView
+            
+            
         } else {
             
             view = MKMarkerAnnotationView(  annotation: annotation, reuseIdentifier: identifier)

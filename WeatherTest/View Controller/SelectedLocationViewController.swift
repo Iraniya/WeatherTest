@@ -28,8 +28,8 @@ class SelectedLocationViewController: UIViewController {
         
         let currenCLLtLocation = currentLocation ?? CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) //Or we can show error message saying location not found
         mapView.centerToLocation(currenCLLtLocation)
-        
-        let weatherString = "Location: Chandkheda, Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
+        let locationName: String = ""
+        let weatherString = "Location: \(locationName), Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
         
         let currentLocation = UserLocation(
             title: "Current Location",
