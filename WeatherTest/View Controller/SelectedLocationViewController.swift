@@ -32,7 +32,7 @@ class SelectedLocationViewController: UIViewController {
         let weatherString = "Location: \(locationName), Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
         
         let currentLocation = UserLocation(
-            title: "Current Location",
+            title: "Selected Location",
             locationName: weatherString,
             discipline: "Weather: \(32)",
             coordinate: CLLocationCoordinate2D(latitude: weatherData.latitude, longitude: weatherData.longitude))
