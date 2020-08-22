@@ -14,6 +14,7 @@ struct Defaults {
     static let apiKey = "tnperxfip8renk2hlzcccwetbnesby"
 }
 
+
 // MARK: - Types
 
 enum AlertType {
@@ -58,4 +59,11 @@ struct WeatherServiceRequest {
         return url
     }
     
+}
+
+
+extension Double {
+    var toCelcius: Double {
+        (self - 32.0) / 1.8
+    }
 }

@@ -14,8 +14,8 @@
             filePath = "WeatherTest/View Controller/MainScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "presentAlert(of:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,89 +30,9 @@
             filePath = "WeatherTest/View Controller/MainScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "locationManager(_:didChangeAuthorization:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E1F10917-4BB6-4E31-826C-95016ECEA666"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherTest/View Controller/MainScreenViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "handleTap(gestureRecognizer:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F85A9BA2-905A-401F-BBFD-086AA6A62085"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherTest/View Controller/SelectedLocationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "fetchWeatherData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F85A9BA2-905A-401F-BBFD-086AA6A62085 - da27160cbf824150"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WeatherTest.SelectedLocationViewController.(fetchWeatherData in _BF7F5329CF49FA6E73C5361757BD5A87)() -&gt; ()"
-                  moduleName = "WeatherTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iraniya/Desktop/WeatherTest/WeatherTest/View%20Controller/SelectedLocationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  uuid = "F85A9BA2-905A-401F-BBFD-086AA6A62085 - f54a61ef48126ce9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;WeatherTest.WeatherData, WeatherTest.WeatherDataError&gt;) -&gt; () in WeatherTest.SelectedLocationViewController.(fetchWeatherData in _BF7F5329CF49FA6E73C5361757BD5A87)() -&gt; ()"
-                  moduleName = "WeatherTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iraniya/Desktop/WeatherTest/WeatherTest/View%20Controller/SelectedLocationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "208">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D154775-FB84-41EF-9121-E980B6D296B4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherTest/View Controller/MainScreenViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "handleTap(gestureRecognizer:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

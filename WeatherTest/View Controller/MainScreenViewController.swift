@@ -65,10 +65,12 @@ class MainScreenViewController: UIViewController, UIGestureRecognizerDelegate {
         mapView.centerToLocation(currenCLLtLocation)
         
         let locationName: String = ""
-        let weatherString = "Location: \(locationName), Weather: \(weatherData.temperature), Wind: \(weatherData.windSpeed)\n\(weatherData.summary)"
+        let temperature = weatherData.temperature.toCelcius
+        let temperatureString = String(format: "%.1f °C", temperature)
+        let weatherString = "\(temperatureString), Wind:\(weatherData.windSpeed),\(weatherData.summary)"
         
         let currentLocation = UserLocation(
-            title: "Current Location",
+            title: "Current Location: \(locationName)",
             locationName: weatherString,
             discipline: "Weather: \(32)",
             coordinate: CLLocationCoordinate2D(latitude: weatherData.latitude, longitude: weatherData.longitude))
